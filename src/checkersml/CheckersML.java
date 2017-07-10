@@ -35,6 +35,29 @@ public class CheckersML {
             }
             System.out.println("");
         }
+        
+        System.out.println("Moving a chip...");
+        board.move(5, 0, 4, 1);
+        
+        System.out.println("Board new: ");
+        for (int i = 0; i < 8; i++) {
+            System.out.print("|");
+            for (int j = 0; j < 8; j++) {
+                if(board.get(i).get(j).owner == "none"){
+                    System.out.print("  "+" |");
+                }
+                else if(board.get(i).get(j).owner == "p1"){
+                    System.out.print(" x"+" |");
+                }
+                else if(board.get(i).get(j).owner == "p2"){
+                    System.out.print(" o"+" |");
+                }
+                else{
+                    System.out.println("...");
+                }
+            }
+            System.out.println("");
+        }
     }
     
 }

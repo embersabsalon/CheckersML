@@ -37,4 +37,10 @@ public class Board {
     public Line get(int x){
         return board.get(x);
     }
+    
+    public void move(int x,int y,int xx, int yy){
+        String own = board.get(x).get(y).owner;
+        board.get(x).remove(x, y);
+        board.get(xx).add(xx, yy, own);
+    }
 }

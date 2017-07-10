@@ -110,4 +110,16 @@ public class Line {
         return line.get(x);
     }
     
+    public void remove(int x, int y){
+        Spot neww = new Spot(x,y,"none");
+        line.remove(y);
+        line.add(y, neww);
+    }
+    
+    public void add(int x, int y, String player){
+        Spot neww = new Spot(x,y,player);
+        line.remove(y);
+        line.add(y, neww);
+    }
+    
 }
