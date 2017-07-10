@@ -15,7 +15,26 @@ public class CheckersML {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("Board look: ");
+        Board board = new Board();
+        for (int i = 0; i < 8; i++) {
+            System.out.print("|");
+            for (int j = 0; j < 8; j++) {
+                if(board.get(i).get(j).owner == "none"){
+                    System.out.print("  "+" |");
+                }
+                else if(board.get(i).get(j).owner == "p1"){
+                    System.out.print(" x"+" |");
+                }
+                else if(board.get(i).get(j).owner == "p2"){
+                    System.out.print(" o"+" |");
+                }
+                else{
+                    System.out.println("...");
+                }
+            }
+            System.out.println("");
+        }
     }
     
 }

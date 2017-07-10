@@ -19,6 +19,7 @@ public class Line {
     }
     
     Line(String a){
+        line = new LinkedList<Spot>();
         if(a == "p11"){
             for (int i = 0; i < 8; i++) {
                 if(i%2 == 0){
@@ -70,7 +71,7 @@ public class Line {
         else if(a == "p22"){
             for (int i = 0; i < 8; i++) {
                 if(i%2 != 0){
-                    Spot aa = new Spot(1,i,"p1");
+                    Spot aa = new Spot(1,i,"p2");
                     line.add(aa);
                 }
                 else{
@@ -103,6 +104,10 @@ public class Line {
                     line.add(aa);
             }
         }
+    }
+    
+    public Spot get(int x){
+        return line.get(x);
     }
     
 }
